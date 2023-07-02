@@ -37,48 +37,57 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    border: 2px solid black;
 }
 
-.player-1 {
+#player-1 {
     position: relative;
     background-color: blue;
     height: 300px;
     width: 300px;
-    left: 64px;
+    z-index: 0;
+    text-align: center;
+    color: white;
 }
 
-.player-2 {
+#player-2 {
     position: relative;
     background-color: red;
     height: 300px;
     width: 300px;
-    right: 64px;
+    z-index: 0;
+    text-align: center;
+    color: white;
 } 
 
 .board {
     width: 300px;
     display: flex;
     flex-wrap: wrap;
-    margin: 4rem;
 }
 
 .white {
-    color: white;
+    color: black;
 }
 
 #gameEnd {
-    position: fixed;
     display: none;
-    width: 100%;
-    height: 100%;
-    top: 0; right: 0; left: 0; bottom: 0;
-    background-color: black;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    z-index: 1;
 }
 
 #reloadGame {
     padding: 10px;
     cursor: pointer;
+    position: absolute;
 }
+
+#endGameStatus {
+    display: none;
+}
+
+.winning-cell {
+    color: green;
+  }
+  
